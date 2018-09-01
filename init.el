@@ -553,8 +553,7 @@ before packages are loaded."
         plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
         org-agenda-files '("~/org/")
-        org-capture-templates '(("t" "Todos" entry (file+headline "~/org/Tasks.org" "TASKS")
-                                 "* TODO  %?\n\tSCHEDULED: %t\n\t%i\n" :empty-lines 1)
+        org-capture-templates '(("t" "Todos" entry (file "~/org/Tasks.org"))
                                 ("n" "Notes" entry (file+headline "~/org/Notes.org" "NOTES")
                                  "*  %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
                                 ("j" "Journal" entry (file+olp+datetree "~/org/Journal.org")
