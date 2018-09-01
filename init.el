@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
                       better-defaults-move-to-beginning-of-code-first t)
      (org :variables
           org-enable-github-support t
+          org-enable-trello-support t
           org-enable-reveal-js-support t
           org-enable-org-journal-support t
           org-journal-enable-agenda-integration t
