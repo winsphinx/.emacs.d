@@ -99,6 +99,7 @@ This function should only modify configuration layer settings."
      (python :variables
              python-backend 'anaconda
              python-test-runner 'pytest
+             python-spacemacs-indent-guess nil
              python-save-before-test t
              python-sort-imports-on-save t
              python-enable-yapf-format-on-save t)
