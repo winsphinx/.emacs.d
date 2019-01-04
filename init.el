@@ -72,6 +72,8 @@ This function should only modify configuration layer settings."
      erc
      gnus
      epub
+     lsp
+     dap
      git
      github
      pandoc
@@ -96,16 +98,16 @@ This function should only modify configuration layer settings."
             c-c++-enable-clang-support t
             c-c++-enable-clang-format-on-save t)
      (python :variables
-             python-backend 'anaconda
+             python-backend 'lsp
              python-test-runner 'pytest
              python-spacemacs-indent-guess nil
              python-save-before-test t
              python-sort-imports-on-save t
              python-enable-yapf-format-on-save t)
      (java :variables
-           java-backend 'meghanada)
+           java-backend 'lsp)
      (javascript :variables
-                 javascript-backend 'tern
+                 javascript-backend 'lsp
                  js-indent-level 2
                  js2-basic-offset 2)
      emacs-lisp
