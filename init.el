@@ -91,6 +91,7 @@ This function should only modify configuration layer settings."
      (shell :variables
             shell-default-height 30
             shell-default-full-span nil
+            shell-default-shell 'eshell
             shell-default-position 'bottom)
      syntax-checking
      version-control
@@ -530,12 +531,6 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; 配置中文字体
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-                      charset (font-spec :family "微软雅黑")))
-  (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
-
   ;; 配置地理信息
   (setq calendar-latitude 30.0072
         calendar-longitude 120.5749
@@ -584,14 +579,25 @@ before packages are loaded."
       (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
   (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
-  (defun et/semantic-remove-hooks ()
+  ;;
+  (defun semantic-remove-hooks ()
     (remove-hook 'completion-at-point-functions
                  'semantic-analyze-completion-at-point-function)
     (remove-hook 'completion-at-point-functions
                  'semantic-analyze-notc-completion-at-point-function)
     (remove-hook 'completion-at-point-functions
                  'semantic-analyze-nolongprefix-completion-at-point-function))
-  (add-hook 'semantic-mode-hook #'et/semantic-remove-hooks)
+  (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
+
+  ;; 最后加载
+  (spacemacs|do-after-display-system-init
+   ;; 配置中文字体
+   (dolist (charset '(kana han symbol cjk-misc bopomofo))
+     (set-fontset-font (frame-parameter nil 'font)
+                       charset (font-spec :family "微软雅黑")))
+   (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
+
+   )
 
   )
 
