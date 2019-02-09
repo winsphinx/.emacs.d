@@ -96,12 +96,18 @@ This function should only modify configuration layer settings."
      syntax-checking
      version-control
      (c-c++ :variables
-            c-c++-enable-clang-support t
+            ;; c-c++-enable-clang-support t
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-executable (file-truename "~/.spacemacs.d/tools/ccls.exe")
+            c-c++-lsp-cache-dir (file-truename "~/.spacemacs.d/cache/")
+            c-c++-lsp-sem-highlight-method 'font-lock
+            c-c++-lsp-sem-highlight-rainbow t
             c-c++-enable-clang-format-on-save t)
      (python :variables
              python-backend 'lsp
              python-test-runner 'pytest
              python-spacemacs-indent-guess nil
+             python-mypy nil
              python-save-before-test t
              python-sort-imports-on-save t
              python-enable-yapf-format-on-save t)
