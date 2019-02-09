@@ -54,11 +54,14 @@ This function should only modify configuration layer settings."
                       better-defaults-move-to-beginning-of-code-first t)
      (org :variables
           org-enable-github-support t
-          org-enable-trello-support t
           org-enable-reveal-js-support t
           org-enable-org-journal-support t
           org-journal-enable-agenda-integration t
-          org-journal-dir "~/org/journal/")
+          org-journal-dir "~/org/journal/"
+          org-journal-date-prefix "#+TITLE: "
+          org-journal-date-format "%A, %Y/%m/%d"
+          org-journal-time-prefix "* "
+          org-journal-time-format "")
      (treemacs :variables
                treemacs-use-follow-mode t
                treemacs-use-filewatch-mode t
@@ -549,8 +552,10 @@ before packages are loaded."
   ;; 配置 org
   (setq system-time-locale "C"
         spaceline-org-clock-p t
-        org-confirm-babel-evaluate nil
+        org-hide-emphasis-markers t
+        org-src-preserve-indentation t
         org-enforce-todo-dependencies t
+        org-confirm-babel-evaluate nil
         org-plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
