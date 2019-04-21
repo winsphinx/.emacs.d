@@ -76,7 +76,6 @@ This function should only modify configuration layer settings."
              ranger-max-preview-size 1)
      erc
      gnus
-     epub
      lsp
      dap
      git
