@@ -131,6 +131,8 @@ This function should only modify configuration layer settings."
      django
      graphviz
      plantuml
+     (cmake :variables
+            cmake-enable-cmake-ide-support t)
      (restclient :variables
                  restclient-use-org t)
      (chinese :variables
