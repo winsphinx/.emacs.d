@@ -55,9 +55,11 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-github-support t
           org-enable-reveal-js-support t
+          org-enable-hugo-support t
+          org-enable-epub-support t
           org-enable-org-journal-support t
           org-journal-enable-agenda-integration t
-          org-journal-dir "~/org/journal/"
+          org-journal-dir "~/.org/journal"
           org-journal-date-prefix "#+TITLE: "
           org-journal-date-format "%A, %Y/%m/%d"
           org-journal-time-prefix "* "
@@ -90,6 +92,7 @@ This function should only modify configuration layer settings."
                markdown-command "pandoc"
                markdown-live-preview-engine 'eww)
      (deft :variables
+           deft-directory "~/.org/deft"
            deft-recursive t)
      (shell :variables
             shell-default-height 30
@@ -559,11 +562,11 @@ before packages are loaded."
         org-plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
-        org-agenda-files '("~/org/")
-        org-capture-templates '(("t" "Todos" entry (file "~/org/Tasks.org"))
-                                ("n" "Notes" entry (file+headline "~/org/Notes.org" "NOTES")
+        org-agenda-files '("~/.org/")
+        org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org"))
+                                ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
                                  "*  %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
-                                ("j" "Journal" entry (file+olp+datetree "~/org/Journal.org")
+                                ("j" "Journal" entry (file+olp+datetree "~/.org/Journal.org")
                                  "*  %?\n\t%T\n\t%i\n")))
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
