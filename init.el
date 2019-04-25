@@ -83,6 +83,7 @@ This function should only modify configuration layer settings."
      pandoc
      semantic
      imenu-list
+     bibtex
      (latex :variables
             latex-enable-magic t
             latex-enable-folding t
