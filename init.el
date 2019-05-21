@@ -53,10 +53,10 @@ This function should only modify configuration layer settings."
                       better-defaults-move-to-end-of-code-first t
                       better-defaults-move-to-beginning-of-code-first t)
      (org :variables
-          org-enable-github-support t
-          org-enable-reveal-js-support t
           org-enable-hugo-support t
           org-enable-epub-support t
+          org-enable-github-support t
+          org-enable-reveal-js-support t
           org-enable-org-journal-support t
           org-journal-enable-agenda-integration t
           org-journal-dir "~/.org/journal"
