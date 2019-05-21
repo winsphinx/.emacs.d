@@ -113,10 +113,9 @@ This function should only modify configuration layer settings."
              python-backend 'lsp
              python-test-runner 'pytest
              python-spacemacs-indent-guess nil
-             python-mypy nil
+             python-format-on-save t
              python-save-before-test t
-             python-sort-imports-on-save t
-             python-enable-yapf-format-on-save t)
+             python-sort-imports-on-save t)
      (java :variables
            java-backend 'lsp)
      (javascript :variables
