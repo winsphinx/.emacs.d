@@ -122,6 +122,7 @@ This function should only modify configuration layer settings."
      (javascript :variables
                  javascript-backend 'lsp
                  javascript-import-tool 'import-js
+                 javascript-fmt-on-save t
                  js-indent-level 2
                  js2-basic-offset 2)
      emacs-lisp
