@@ -104,7 +104,7 @@ This function should only modify configuration layer settings."
      (c-c++ :variables
             c-c++-backend 'lsp-ccls
             c-c++-lsp-executable (file-truename "~/.spacemacs.d/tools/ccls.exe")
-            c-c++-lsp-cache-dir (file-truename "~/.spacemacs.d/cache/")
+            c-c++-lsp-cache-dir ".ccls-cache"
             c-c++-lsp-sem-highlight-method 'font-lock
             c-c++-lsp-sem-highlight-rainbow t
             ;; c-c++-enable-clang-support t
