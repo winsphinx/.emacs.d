@@ -580,11 +580,15 @@ before packages are loaded."
         plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
         org-agenda-files '("~/.org/")
-        org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org"))
+        org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
+                                 "* TODO %?\n")
                                 ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
-                                 "*  %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
-                                ("j" "Journal" entry (file+olp+datetree "~/.org/Journal.org")
-                                 "*  %?\n\t%T\n\t%i\n")))
+                                 "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
+                                ("b" "Blogs" entry (file "~/.org/Blogs.org")
+                                 (function org-hugo-new-subtree-post-capture-template))
+                                ("j" "Journal" entry (function org-journal-new-journal-capture-template)
+                                 "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
+
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
                                  (calc . t)
@@ -610,7 +614,7 @@ before packages are loaded."
       (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
   (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
-  ;;
+  ;; 配置 semantic
   (defun semantic-remove-hooks ()
     (remove-hook 'completion-at-point-functions
                  'semantic-analyze-completion-at-point-function)
@@ -619,6 +623,20 @@ before packages are loaded."
     (remove-hook 'completion-at-point-functions
                  'semantic-analyze-nolongprefix-completion-at-point-function))
   (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
+
+  ;; 配置 org-capture
+  (with-eval-after-load 'org-capture
+
+    (defun org-journal-new-journal-capture-template ()
+      (org-journal-new-entry t)
+      (goto-char (point-min)))
+
+    (defun org-hugo-new-subtree-post-capture-template ()
+      (let* ((title (read-from-minibuffer "Post Title: "))
+             (fname (org-hugo-slug title)))
+        (mapconcat #'identity
+                   `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n")
+                   "\n"))))
 
   ;; 最后加载
   (spacemacs|do-after-display-system-init
