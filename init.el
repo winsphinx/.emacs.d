@@ -124,8 +124,9 @@ This function should only modify configuration layer settings."
                  javascript-fmt-on-save t
                  js-indent-level 2
                  js2-basic-offset 2)
+     (json :variables
+           json-fmt-on-save t)
      emacs-lisp
-     json
      yaml
      html
      django
