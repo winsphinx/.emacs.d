@@ -63,11 +63,6 @@ This function should only modify configuration layer settings."
           org-journal-date-format "%A, %Y/%m/%d"
           org-journal-time-prefix "* "
           org-journal-time-format "")
-     (treemacs :variables
-               treemacs-use-follow-mode t
-               treemacs-use-filewatch-mode t
-               treemacs-use-git-mode 'extended
-               treemacs-use-collapsed-directories 3)
      (ranger :variables
              ranger-show-literal nil
              ranger-show-hidden t
@@ -82,6 +77,7 @@ This function should only modify configuration layer settings."
      pandoc
      bibtex
      semantic
+     treemacs
      imenu-list
      search-engine
      (latex :variables
@@ -624,11 +620,9 @@ before packages are loaded."
 
   ;; 配置 org-capture
   (with-eval-after-load 'org-capture
-
     (defun org-journal-new-journal-capture-template ()
       (org-journal-new-entry t)
       (goto-char (point-min)))
-
     (defun org-hugo-new-subtree-post-capture-template ()
       (let* ((title (read-from-minibuffer "Post Title: "))
              (fname (org-hugo-slug title)))
