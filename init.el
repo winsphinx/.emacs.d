@@ -68,8 +68,9 @@ This function should only modify configuration layer settings."
              ranger-show-hidden t
              ranger-show-preview t
              ranger-max-preview-size 1)
-     erc
+     emoji
      gnus
+     erc
      lsp
      dap
      git
@@ -80,6 +81,8 @@ This function should only modify configuration layer settings."
      treemacs
      imenu-list
      search-engine
+     syntax-checking
+     version-control
      (latex :variables
             latex-enable-magic t
             latex-enable-folding t
@@ -95,8 +98,6 @@ This function should only modify configuration layer settings."
             shell-default-full-span nil
             shell-default-shell 'eshell
             shell-default-position 'bottom)
-     syntax-checking
-     version-control
      (c-c++ :variables
             c-c++-backend 'lsp-ccls
             c-c++-lsp-executable (file-truename "~/.spacemacs.d/tools/ccls.exe")
