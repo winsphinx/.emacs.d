@@ -128,7 +128,9 @@ This function should only modify configuration layer settings."
      html
      django
      graphviz
-     plantuml
+     (plantuml :variables
+               plantuml-default-exec-mode 'jar
+               plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar")
      (cmake :variables
             cmake-enable-cmake-ide-support t)
      (restclient :variables
@@ -572,7 +574,6 @@ before packages are loaded."
         org-enforce-todo-dependencies t
         org-confirm-babel-evaluate nil
         org-plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
-        plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
         org-agenda-files '("~/.org/")
         org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
