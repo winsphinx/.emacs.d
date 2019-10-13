@@ -577,15 +577,7 @@ before packages are loaded."
         org-confirm-babel-evaluate nil
         org-plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
         org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
-        org-agenda-files '("~/.org/")
-        org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
-                                 "* TODO %?\n")
-                                ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
-                                 "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
-                                ("b" "Blogs" entry (file "~/.org/Blogs.org")
-                                 (function org-hugo-new-subtree-post-capture-template))
-                                ("j" "Journal" entry (function org-journal-new-journal-capture-template)
-                                 "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?")))
+        org-agenda-files '("~/.org/"))
 
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
@@ -632,7 +624,15 @@ before packages are loaded."
              (fname (org-hugo-slug title)))
         (mapconcat #'identity
                    `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n")
-                   "\n"))))
+                   "\n")))
+    (setq org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
+                                   "* TODO %?\n")
+                                  ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
+                                   "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
+                                  ("b" "Blogs" entry (file "~/.org/Blogs.org")
+                                   (function org-hugo-new-subtree-post-capture-template))
+                                  ("j" "Journal" entry (function org-journal-new-journal-capture-template)
+                                   "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?"))))
 
   ;; 最后加载
   (spacemacs|do-after-display-system-init
