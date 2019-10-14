@@ -125,6 +125,9 @@ This function should only modify configuration layer settings."
                  js2-basic-offset 2)
      (json :variables
            json-fmt-on-save t)
+     (sql :variables
+          sql-auto-indent nil
+          sql-capitalize-keywords t)
      emacs-lisp
      yaml
      html
