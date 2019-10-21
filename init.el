@@ -126,7 +126,7 @@ This function should only modify configuration layer settings."
      (json :variables
            json-fmt-on-save t)
      (sql :variables
-          sql-auto-indent nil
+          sql-auto-indent t
           sql-capitalize-keywords t)
      emacs-lisp
      yaml
