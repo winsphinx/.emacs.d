@@ -80,11 +80,10 @@ This function should only modify configuration layer settings."
      semantic
      treemacs
      imenu-list
+     typography
      search-engine
      syntax-checking
      version-control
-     (typography :variables
-                 typography-enable-typographic-editing t)
      (latex :variables
             latex-enable-magic t
             latex-enable-folding t
