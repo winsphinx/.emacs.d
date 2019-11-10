@@ -100,13 +100,12 @@ This function should only modify configuration layer settings."
             shell-default-shell 'eshell
             shell-default-position 'bottom)
      (c-c++ :variables
-            c-c++-backend 'lsp-ccls
-            c-c++-lsp-executable (file-truename "~/.spacemacs.d/tools/ccls.exe")
-            c-c++-lsp-cache-dir ".ccls-cache"
-            c-c++-lsp-sem-highlight-method 'font-lock
+            c-c++-backend 'lsp-clangd
             c-c++-lsp-sem-highlight-rainbow t
-            ;; c-c++-enable-clang-support t
-            c-c++-enable-clang-format-on-save t)
+            c-c++-lsp-sem-highlight-method 'font-lock
+            c-c++-enable-clang-support t
+            c-c++-enable-clang-format-on-save t
+            c++-enable-organize-includes-on-save t)
      (python :variables
              python-backend 'lsp
              python-test-runner 'pytest
