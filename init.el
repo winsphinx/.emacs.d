@@ -62,7 +62,8 @@ This function should only modify configuration layer settings."
           org-journal-date-prefix "#+TITLE: "
           org-journal-date-format "%A, %Y/%m/%d"
           org-journal-time-prefix "* "
-          org-journal-time-format "")
+          org-journal-time-format ""
+          org-plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
      (ranger :variables
              ranger-show-literal nil
              ranger-show-hidden t
@@ -79,8 +80,8 @@ This function should only modify configuration layer settings."
      bibtex
      semantic
      treemacs
-     imenu-list
      typography
+     imenu-list
      search-engine
      syntax-checking
      version-control
@@ -133,7 +134,7 @@ This function should only modify configuration layer settings."
      graphviz
      (plantuml :variables
                plantuml-default-exec-mode 'jar
-               plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar")
+               plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
      (cmake :variables
             cmake-enable-cmake-ide-support t)
      (restclient :variables
@@ -575,10 +576,7 @@ before packages are loaded."
         org-hide-emphasis-markers t
         org-src-preserve-indentation t
         org-enforce-todo-dependencies t
-        org-confirm-babel-evaluate nil
-        org-plantuml-jar-path "~/.spacemacs.d/tools/plantuml.jar"
-        org-ditaa-jar-path "~/.spacemacs.d/tools/ditaa.jar"
-        org-agenda-files '("~/.org/"))
+        org-confirm-babel-evaluate nil)
 
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
@@ -626,7 +624,8 @@ before packages are loaded."
         (mapconcat #'identity
                    `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n")
                    "\n")))
-    (setq org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
+    (setq org-agenda-files '("~/.org/")
+          org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
                                    "* TODO %?\n")
                                   ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
                                    "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
