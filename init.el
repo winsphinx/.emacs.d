@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
           org-enable-reveal-js-support t
           org-enable-org-journal-support t
           org-journal-enable-agenda-integration t
-          org-journal-dir "~/.org/journal"
+          org-journal-dir "~/org/journal"
           org-journal-date-prefix "#+TITLE: "
           org-journal-date-format "%A, %Y/%m/%d"
           org-journal-time-prefix "* "
@@ -93,7 +93,7 @@ This function should only modify configuration layer settings."
                markdown-command "pandoc"
                markdown-live-preview-engine 'eww)
      (deft :variables
-           deft-directory "~/.org/deft"
+           deft-directory "~/org/deft"
            deft-recursive t)
      (shell :variables
             shell-default-height 30
@@ -576,7 +576,8 @@ before packages are loaded."
         org-hide-emphasis-markers t
         org-src-preserve-indentation t
         org-enforce-todo-dependencies t
-        org-confirm-babel-evaluate nil)
+        org-confirm-babel-evaluate nil
+        org-agenda-files '("~/org/"))
 
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
@@ -624,12 +625,11 @@ before packages are loaded."
         (mapconcat #'identity
                    `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n")
                    "\n")))
-    (setq org-agenda-files '("~/.org/")
-          org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
+    (setq org-capture-templates '(("t" "Todos" entry (file "~/org/Tasks.org")
                                    "* TODO %?\n")
-                                  ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
+                                  ("n" "Notes" entry (file+headline "~/org/Notes.org" "NOTES")
                                    "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
-                                  ("b" "Blogs" entry (file "~/.org/Blogs.org")
+                                  ("b" "Blogs" entry (file "~/org/Blogs.org")
                                    (function org-hugo-new-subtree-post-capture-template))
                                   ("j" "Journal" entry (function org-journal-new-journal-capture-template)
                                    "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?"))))
@@ -641,9 +641,7 @@ before packages are loaded."
      (set-fontset-font (frame-parameter nil 'font)
                        charset (font-spec :family "微软雅黑")))
    (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
-
    )
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
