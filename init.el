@@ -127,7 +127,6 @@ This function should only modify configuration layer settings."
      (sql :variables
           sql-auto-indent t
           sql-capitalize-keywords t)
-     emacs-lisp
      yaml
      html
      django
@@ -141,6 +140,8 @@ This function should only modify configuration layer settings."
                  restclient-use-org t)
      (chinese :variables
               chinese-enable-youdao-dict t)
+     ipython-notebook
+     emacs-lisp
      shell-scripts
      windows-scripts
      )
@@ -582,13 +583,14 @@ before packages are loaded."
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
                                  (calc . t)
-                                 (ditaa . t)
                                  (dot . t)
+                                 (ein . t)
                                  (emacs-lisp . t)
                                  (gnuplot . t)
                                  (java . t)
                                  (js . t)
                                  (latex . t)
+                                 (lilypond . t)
                                  (lisp . t)
                                  (lua . t)
                                  (org . t)
