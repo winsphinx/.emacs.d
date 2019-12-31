@@ -578,7 +578,7 @@ before packages are loaded."
         org-src-preserve-indentation t
         org-enforce-todo-dependencies t
         org-confirm-babel-evaluate nil
-        org-agenda-files '("~/org/"))
+        org-agenda-files '("~/org"))
 
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
@@ -628,11 +628,11 @@ before packages are loaded."
                    `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n")
                    "\n")))
     (setq org-capture-templates '(("t" "Todos" entry (file "~/org/Tasks.org")
-                                   "* TODO %?\n")
+                                   "* TODO %?\n\t%a\n\t%i\n")
                                   ("n" "Notes" entry (file+headline "~/org/Notes.org" "NOTES")
                                    "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
                                   ("b" "Blogs" entry (file "~/org/Blogs.org")
-                                   (function org-hugo-new-subtree-post-capture-template))
+                                   (function org-hugo-new-subtree-post-capture-template) :empty-lines 1)
                                   ("j" "Journal" entry (function org-journal-new-journal-capture-template)
                                    "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?"))))
 
