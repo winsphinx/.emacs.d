@@ -127,6 +127,11 @@ This function should only modify configuration layer settings."
      (sql :variables
           sql-auto-indent t
           sql-capitalize-keywords t)
+     (clojure :variables
+              ;; clojure-enable-sayid t
+              clojure-enable-clj-refactor t
+              clojure-enable-fancify-symbols t
+              clojure-enable-linters 'clj-kondo)
      yaml
      html
      django
@@ -583,6 +588,7 @@ before packages are loaded."
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
                                  (calc . t)
+                                 (clojure . t)
                                  (dot . t)
                                  (ein . t)
                                  (emacs-lisp . t)
