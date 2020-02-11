@@ -624,9 +624,6 @@ before packages are loaded."
 
   ;; 配置 org-capture
   (with-eval-after-load 'org-capture
-    (defun org-journal-new-journal-capture-template ()
-      (org-journal-new-entry t)
-      (goto-char (point-min)))
     (defun org-hugo-new-subtree-post-capture-template ()
       (let* ((title (read-from-minibuffer "Post Title: "))
              (fname (org-hugo-slug title)))
@@ -638,9 +635,7 @@ before packages are loaded."
                                   ("n" "Notes" entry (file+headline "~/org/Notes.org" "NOTES")
                                    "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
                                   ("b" "Blogs" entry (file "~/org/Blogs.org")
-                                   (function org-hugo-new-subtree-post-capture-template) :empty-lines 1)
-                                  ("j" "Journal" entry (function org-journal-new-journal-capture-template)
-                                   "* %(format-time-string org-journal-time-format)%^{Title}\n%i%?"))))
+                                   (function org-hugo-new-subtree-post-capture-template) :empty-lines 1))))
 
   ;; 最后加载
   (spacemacs|do-after-display-system-init
