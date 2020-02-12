@@ -57,9 +57,8 @@ This function should only modify configuration layer settings."
           org-enable-github-support t
           org-enable-reveal-js-support t
           org-enable-org-journal-support t
-          ;; org-journal-enable-agenda-integration t
+          org-journal-enable-agenda-integration t
           org-journal-dir "~/org/journal/"
-          org-journal-file-format "%Y%m%d.org"
           org-journal-date-prefix "#+TITLE: "
           org-journal-date-format "%A, %Y/%m/%d"
           org-journal-time-prefix "* "
@@ -584,7 +583,7 @@ before packages are loaded."
         org-src-preserve-indentation t
         org-enforce-todo-dependencies t
         org-confirm-babel-evaluate nil
-        org-agenda-files '("~/org/" "~/org/journal/"))
+        org-agenda-files '("~/org/"))
 
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
