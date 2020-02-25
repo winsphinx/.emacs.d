@@ -111,6 +111,7 @@ This function should only modify configuration layer settings."
              python-backend 'lsp
              python-test-runner 'pytest
              python-spacemacs-indent-guess nil
+             python-formatter 'yapf
              python-format-on-save t
              python-save-before-test t
              python-sort-imports-on-save t)
