@@ -72,7 +72,10 @@ This function should only modify configuration layer settings."
      pandoc
      bibtex
      semantic
-     treemacs
+     (treemacs :variables
+               treemacs-use-filewatch-mode t
+               treemacs-use-follow-mode 'tag
+               treemacs-use-git-mode 'deferred)
      typography
      imenu-list
      search-engine
