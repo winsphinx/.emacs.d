@@ -89,7 +89,9 @@ This function should only modify configuration layer settings."
                markdown-command "pandoc"
                markdown-live-preview-engine 'eww)
      (deft :variables
+           deft-extensions '("org" "md" "txt")
            deft-directory "~/org/deft/"
+           deft-zetteldeft t
            deft-recursive t)
      (shell :variables
             shell-default-height 30
