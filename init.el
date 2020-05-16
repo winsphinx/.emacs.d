@@ -55,8 +55,7 @@ This function should only modify configuration layer settings."
           org-enable-hugo-support t
           org-enable-epub-support t
           org-enable-github-support t
-          org-enable-reveal-js-support t
-          org-plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
+          org-enable-reveal-js-support t)
      (ranger :variables
              ranger-show-literal nil
              ranger-show-hidden t
@@ -137,7 +136,8 @@ This function should only modify configuration layer settings."
      graphviz
      (plantuml :variables
                plantuml-default-exec-mode 'jar
-               plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
+               plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar"
+               org-plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
      (cmake :variables
             cmake-enable-cmake-ide-support t)
      (restclient :variables
