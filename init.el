@@ -61,7 +61,6 @@ This function should only modify configuration layer settings."
              ranger-show-hidden t
              ranger-show-preview t
              ranger-max-preview-size 1)
-     emoji
      gnus
      erc
      lsp
