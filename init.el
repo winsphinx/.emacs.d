@@ -125,10 +125,10 @@ This function should only modify configuration layer settings."
           sql-auto-indent t
           sql-capitalize-keywords t)
      (clojure :variables
+              ;; clojure-enable-linters 'clj-kondo
               ;; clojure-enable-sayid t
               clojure-enable-clj-refactor t
-              clojure-enable-fancify-symbols t
-              clojure-enable-linters 'clj-kondo)
+              clojure-enable-fancify-symbols t)
      yaml
      html
      django
