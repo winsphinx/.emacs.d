@@ -38,12 +38,6 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (helm :variables
-           helm-no-header nil
-           helm-use-fuzzy 'always
-           helm-enable-auto-resize nil)
-     (ibuffer :variables
-              ibuffer-group-buffers-by 'projects)
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t
@@ -51,51 +45,7 @@ This function should only modify configuration layer settings."
      (better-defaults :variables
                       better-defaults-move-to-end-of-code-first t
                       better-defaults-move-to-beginning-of-code-first t)
-     (org :variables
-          org-enable-hugo-support t
-          org-enable-epub-support t
-          org-enable-github-support t
-          org-enable-reveal-js-support t)
-     (ranger :variables
-             ranger-show-literal nil
-             ranger-show-hidden t
-             ranger-show-preview t
-             ranger-max-preview-size 1)
-     gnus
-     erc
-     lsp
-     dap
-     git
-     github
-     pandoc
      bibtex
-     semantic
-     (treemacs :variables
-               treemacs-use-filewatch-mode t
-               treemacs-use-follow-mode 'tag
-               treemacs-use-git-mode 'deferred)
-     typography
-     imenu-list
-     search-engine
-     syntax-checking
-     version-control
-     (latex :variables
-            latex-enable-magic t
-            latex-enable-folding t
-            latex-enable-auto-fill t)
-     (markdown :variables
-               markdown-command "pandoc"
-               markdown-live-preview-engine 'eww)
-     (deft :variables
-           deft-extensions '("org" "md" "txt")
-           deft-directory "~/org/deft/"
-           deft-zetteldeft t
-           deft-recursive t)
-     (shell :variables
-            shell-default-height 30
-            shell-default-full-span nil
-            shell-default-shell 'eshell
-            shell-default-position 'bottom)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
             c-c++-lsp-enable-semantic-highlight 'rainbow
@@ -103,14 +53,37 @@ This function should only modify configuration layer settings."
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-format-on-save t
             c++-enable-organize-includes-on-save t)
-     (python :variables
-             python-backend 'lsp
-             python-test-runner 'pytest
-             python-spacemacs-indent-guess nil
-             python-formatter 'yapf
-             python-format-on-save t
-             python-save-before-test t
-             python-sort-imports-on-save t)
+     (chinese :variables
+              chinese-enable-youdao-dict t)
+     (clojure :variables
+              ;; clojure-enable-linters 'clj-kondo
+              ;; clojure-enable-sayid t
+              clojure-enable-clj-refactor t
+              clojure-enable-fancify-symbols t)
+     (cmake :variables
+            cmake-enable-cmake-ide-support t)
+     dap
+     (deft :variables
+       deft-extensions '("org" "md" "txt")
+       deft-directory "~/org/deft/"
+       deft-zetteldeft t
+       deft-recursive t)
+     django
+     emacs-lisp
+     erc
+     git
+     github
+     gnus
+     graphviz
+     (helm :variables
+           helm-no-header nil
+           helm-use-fuzzy 'always
+           helm-enable-auto-resize nil)
+     html
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
+     imenu-list
+     ipython-notebook
      (java :variables
            java-backend 'lsp)
      (javascript :variables
@@ -121,32 +94,59 @@ This function should only modify configuration layer settings."
                  js2-basic-offset 2)
      (json :variables
            json-fmt-on-save t)
-     (sql :variables
-          sql-auto-indent t
-          sql-capitalize-keywords t)
-     (clojure :variables
-              ;; clojure-enable-linters 'clj-kondo
-              ;; clojure-enable-sayid t
-              clojure-enable-clj-refactor t
-              clojure-enable-fancify-symbols t)
-     yaml
-     html
-     django
-     graphviz
+     (latex :variables
+            latex-enable-magic t
+            latex-enable-folding t
+            latex-enable-auto-fill t)
+     lsp
+     (markdown :variables
+               markdown-command "pandoc"
+               markdown-live-preview-engine 'eww)
+     (org :variables
+          org-enable-hugo-support t
+          org-enable-epub-support t
+          org-enable-github-support t
+          org-enable-reveal-js-support t)
+     pandoc
      (plantuml :variables
                plantuml-default-exec-mode 'jar
                plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar"
                org-plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
-     (cmake :variables
-            cmake-enable-cmake-ide-support t)
+     (python :variables
+             python-backend 'lsp
+             python-test-runner 'pytest
+             python-spacemacs-indent-guess nil
+             python-formatter 'yapf
+             python-format-on-save t
+             python-save-before-test t
+             python-sort-imports-on-save t)
+     (ranger :variables
+             ranger-show-literal nil
+             ranger-show-hidden t
+             ranger-show-preview t
+             ranger-max-preview-size 1)
      (restclient :variables
                  restclient-use-org t)
-     (chinese :variables
-              chinese-enable-youdao-dict t)
-     ipython-notebook
-     emacs-lisp
+     search-engine
+     semantic
+     (shell :variables
+            shell-default-height 30
+            shell-default-full-span nil
+            shell-default-shell 'eshell
+            shell-default-position 'bottom)
      shell-scripts
+     (sql :variables
+          sql-auto-indent t
+          sql-capitalize-keywords t)
+     syntax-checking
+     (treemacs :variables
+               treemacs-use-filewatch-mode t
+               treemacs-use-follow-mode 'tag
+               treemacs-use-git-mode 'deferred)
+     typography
+     version-control
      windows-scripts
+     yaml
      )
 
    ;; List of additional packages that will be installed without being
