@@ -98,9 +98,9 @@ This function should only modify configuration layer settings."
             shell-default-position 'bottom)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
-            c-c++-lsp-sem-highlight-rainbow t
-            c-c++-lsp-sem-highlight-method 'font-lock
-            c-c++-enable-clang-support t
+            c-c++-lsp-enable-semantic-highlight 'rainbow
+            c-c++-lsp-semantic-highlight-method 'font-lock
+            c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-format-on-save t
             c++-enable-organize-includes-on-save t)
      (python :variables
