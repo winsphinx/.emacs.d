@@ -78,7 +78,9 @@ This function should only modify configuration layer settings."
      (helm :variables
            helm-no-header nil
            helm-use-fuzzy 'always
-           helm-enable-auto-resize nil)
+           helm-enable-auto-resize nil
+           history-length 10
+           history-delete-duplicates t)
      html
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
