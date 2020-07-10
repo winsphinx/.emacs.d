@@ -317,7 +317,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; Default font or prioritized list of fonts.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("iosevka"
                                :size 10.5
                                :weight normal
                                :width normal)
@@ -671,7 +671,7 @@ before packages are loaded."
    (dolist (charset '(kana han symbol cjk-misc bopomofo))
      (set-fontset-font (frame-parameter nil 'font)
                        charset (font-spec :family "微软雅黑")))
-   (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
+   ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    (setq inhibit-compacting-font-caches t)
    )
   )
