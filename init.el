@@ -108,7 +108,8 @@ This function should only modify configuration layer settings."
           org-enable-hugo-support t
           org-enable-epub-support t
           org-enable-github-support t
-          org-enable-reveal-js-support t)
+          org-enable-reveal-js-support t
+          org-superstar-remove-leading-stars t)
      pandoc
      (plantuml :variables
                plantuml-default-exec-mode 'jar
