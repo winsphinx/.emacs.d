@@ -95,6 +95,7 @@ This function should only modify configuration layer settings."
                  js-indent-level 2
                  js2-basic-offset 2)
      (json :variables
+           json-backend 'lsp
            json-fmt-on-save t)
      (latex :variables
             latex-enable-magic t
