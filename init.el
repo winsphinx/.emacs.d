@@ -79,7 +79,6 @@ This function should only modify configuration layer settings."
            helm-no-header nil
            helm-use-fuzzy 'always
            helm-enable-auto-resize nil
-           helm-ff-keep-cached-candidates nil
            history-length 10
            history-delete-duplicates t)
      html
