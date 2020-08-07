@@ -144,6 +144,7 @@ This function should only modify configuration layer settings."
           sql-capitalize-keywords t)
      syntax-checking
      (treemacs :variables
+               treemacs-use-all-the-icons-theme t
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode 'tag
                treemacs-use-git-mode 'deferred)
