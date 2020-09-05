@@ -118,6 +118,7 @@ This function should only modify configuration layer settings."
                org-plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar")
      (python :variables
              python-backend 'lsp
+             python-lsp-server 'pyright
              python-test-runner 'pytest
              python-spacemacs-indent-guess nil
              python-formatter 'yapf
