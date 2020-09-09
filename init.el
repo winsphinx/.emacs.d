@@ -683,7 +683,7 @@ before packages are loaded."
   ;; 最后加载
   (spacemacs|do-after-display-system-init
    ;; 配置中文字体
-   (dolist (charset '(kana han symbol cjk-misc bopomofo))
+   (dolist (charset '(han kana symbol cjk-misc bopomofo))
      (set-fontset-font (frame-parameter nil 'font)
                        charset (font-spec :family "微软雅黑")))
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
