@@ -65,7 +65,7 @@ This function should only modify configuration layer settings."
      dap
      (deft :variables
            deft-extensions '("org" "md" "txt")
-           deft-directory "~/org/deft/"
+           deft-directory "~/org/notes/"
            deft-zetteldeft t
            deft-recursive t)
      django
@@ -114,7 +114,7 @@ This function should only modify configuration layer settings."
           org-agenda-start-with-log-mode t
           org-superstar-remove-leading-stars t
           org-agenda-files '("~/org/")
-          org-roam-directory "~/org/roam/")
+          org-roam-directory "~/org/notes/")
      pandoc
      (plantuml :variables
                plantuml-default-exec-mode 'jar
