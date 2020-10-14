@@ -64,10 +64,10 @@ This function should only modify configuration layer settings."
             cmake-enable-cmake-ide-support t)
      dap
      (deft :variables
-           deft-extensions '("org" "md" "txt")
-           deft-directory "~/org/notes/"
+           deft-recursive t
            deft-zetteldeft t
-           deft-recursive t)
+           deft-directory "~/org/notes/"
+           deft-extensions '("org" "md" "txt"))
      django
      emacs-lisp
      erc
@@ -113,8 +113,9 @@ This function should only modify configuration layer settings."
           org-enable-reveal-js-support t
           org-agenda-start-with-log-mode t
           org-superstar-remove-leading-stars t
-          org-agenda-files '("~/org/")
-          org-roam-directory "~/org/notes/")
+          org-brain-path "~/org/notes/"
+          org-roam-directory "~/org/notes/"
+          org-agenda-files '("~/org/"))
      pandoc
      (plantuml :variables
                plantuml-default-exec-mode 'jar
