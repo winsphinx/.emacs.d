@@ -64,10 +64,10 @@ This function should only modify configuration layer settings."
             cmake-enable-cmake-ide-support t)
      dap
      (deft :variables
-       deft-extensions '("org" "md" "txt")
-       deft-directory "~/org/deft/"
-       deft-zetteldeft t
-       deft-recursive t)
+           deft-extensions '("org" "md" "txt")
+           deft-directory "~/org/deft/"
+           deft-zetteldeft t
+           deft-recursive t)
      django
      emacs-lisp
      erc
@@ -106,11 +106,15 @@ This function should only modify configuration layer settings."
                markdown-command "pandoc"
                markdown-live-preview-engine 'eww)
      (org :variables
-          org-enable-hugo-support t
           org-enable-epub-support t
+          org-enable-hugo-support t
+          org-enable-roam-support t
           org-enable-github-support t
           org-enable-reveal-js-support t
-          org-superstar-remove-leading-stars t)
+          org-agenda-start-with-log-mode t
+          org-superstar-remove-leading-stars t
+          org-agenda-files '("~/org/")
+          org-roam-directory "~/org/roam/")
      pandoc
      (plantuml :variables
                plantuml-default-exec-mode 'jar
@@ -624,9 +628,7 @@ before packages are loaded."
         org-hide-emphasis-markers t
         org-src-preserve-indentation t
         org-enforce-todo-dependencies t
-        org-confirm-babel-evaluate nil
-        org-agenda-start-with-log-mode t
-        org-agenda-files '("~/org/"))
+        org-confirm-babel-evaluate nil)
 
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
