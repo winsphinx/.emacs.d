@@ -615,6 +615,10 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; 配置系统环境
+  (set-language-environment "UTF-8")
+  (setq system-time-locale "C")
+
   ;; 配置地理信息
   (setq calendar-latitude 30.0072
         calendar-longitude 120.5749
@@ -625,13 +629,13 @@ before packages are loaded."
         user-mail-address "winsphinx@xxx.com")
 
   ;; 配置 org
-  (setq system-time-locale "C"
-        spaceline-org-clock-p t
+  (setq spaceline-org-clock-p t
         org-hide-emphasis-markers t
         org-src-preserve-indentation t
         org-enforce-todo-dependencies t
         org-confirm-babel-evaluate nil)
 
+  ;; 配置 org-babel
   (org-babel-do-load-languages 'org-babel-load-languages
                                '((C . t)
                                  (calc . t)
@@ -653,22 +657,6 @@ before packages are loaded."
                                  (ruby . t)
                                  (shell . t)))
 
-  ;; 当子任务全部完成时，总任务自动完成
-  (defun org-summary-todo (n-done n-not-done)
-    (let (org-log-done org-log-states)
-      (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
-  (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
-
-  ;; 配置 semantic
-  (defun semantic-remove-hooks ()
-    (remove-hook 'completion-at-point-functions
-                 'semantic-analyze-completion-at-point-function)
-    (remove-hook 'completion-at-point-functions
-                 'semantic-analyze-notc-completion-at-point-function)
-    (remove-hook 'completion-at-point-functions
-                 'semantic-analyze-nolongprefix-completion-at-point-function))
-  (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
-
   ;; 配置 org-capture
   (with-eval-after-load 'org-capture
     (defun org-hugo-new-subtree-post-capture-template ()
@@ -685,6 +673,22 @@ before packages are loaded."
                                    "*  %?\n\t%T\n\t%i\n")
                                   ("b" "Blogs" entry (file "~/org/Blogs.org")
                                    (function org-hugo-new-subtree-post-capture-template) :empty-lines 1))))
+
+  ;; 配置 semantic
+  (defun semantic-remove-hooks ()
+    (remove-hook 'completion-at-point-functions
+                 'semantic-analyze-completion-at-point-function)
+    (remove-hook 'completion-at-point-functions
+                 'semantic-analyze-notc-completion-at-point-function)
+    (remove-hook 'completion-at-point-functions
+                 'semantic-analyze-nolongprefix-completion-at-point-function))
+  (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
+
+  ;; 当子任务全部完成时，总任务自动完成
+  (defun org-summary-todo (n-done n-not-done)
+    (let (org-log-done org-log-states)
+      (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+  (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
   ;; 最后加载
   (spacemacs|do-after-display-system-init
