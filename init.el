@@ -330,7 +330,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font or prioritized list of fonts.
    dotspacemacs-default-font '("iosevka"
-                               :size 14
+                               :size 12.0
                                :weight normal
                                :width normal)
 
