@@ -63,6 +63,12 @@ This function should only modify configuration layer settings."
      (cmake :variables
             cmake-enable-cmake-ide-support t)
      dap
+     (deft :variables
+           deft-recursive t
+           deft-zetteldeft t
+           deft-auto-save-interval 0
+           deft-directory "~/org/notes/"
+           deft-extensions '("org" "md" "txt"))
      django
      emacs-lisp
      erc
