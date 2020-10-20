@@ -109,13 +109,13 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-epub-support t
           org-enable-hugo-support t
-          org-enable-roam-support t
+          ;; org-enable-roam-support t
           org-enable-github-support t
           org-enable-reveal-js-support t
           org-agenda-start-with-log-mode t
           org-superstar-remove-leading-stars t
           org-brain-path "~/org/notes/"
-          org-roam-directory "~/org/notes/"
+          ;; org-roam-directory "~/org/notes/"
           org-agenda-files '("~/org/"))
      pandoc
      (plantuml :variables
