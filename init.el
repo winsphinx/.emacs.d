@@ -654,6 +654,7 @@ before packages are loaded."
                                  (perl . t)
                                  (plantuml . t)
                                  (python . t)
+                                 (restclient . t)
                                  (ruby . t)
                                  (shell . t)))
 
