@@ -103,9 +103,7 @@ This function should only modify configuration layer settings."
             latex-enable-folding t
             latex-enable-auto-fill t)
      lsp
-     (markdown :variables
-               markdown-command "pandoc"
-               markdown-live-preview-engine 'eww)
+     markdown
      (org :variables
           org-enable-epub-support t
           org-enable-hugo-support t
