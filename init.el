@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
      (better-defaults :variables
                       better-defaults-move-to-end-of-code-first t
                       better-defaults-move-to-beginning-of-code-first t)
-     bibtex
+     (bibtex)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
             c-c++-lsp-enable-semantic-highlight 'rainbow
@@ -62,31 +62,31 @@ This function should only modify configuration layer settings."
               clojure-enable-fancify-symbols t)
      (cmake :variables
             cmake-enable-cmake-ide-support t)
-     dap
+     (dap)
      (deft :variables
            deft-recursive t
            deft-zetteldeft t
            deft-auto-save-interval 0
            deft-directory "~/org/notes/"
            deft-extensions '("org" "md" "txt"))
-     django
-     emacs-lisp
-     erc
-     git
-     github
-     gnus
-     graphviz
+     (django)
+     (emacs-lisp)
+     (erc)
+     (git)
+     (github)
+     (gnus)
+     (graphviz)
      (helm :variables
            helm-no-header nil
            helm-use-fuzzy 'always
            helm-enable-auto-resize nil
            history-length 10
            history-delete-duplicates t)
-     html
+     (html)
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
-     imenu-list
-     ipython-notebook
+     (imenu-list)
+     (ipython-notebook)
      (java :variables
            java-backend 'lsp)
      (javascript :variables
@@ -102,8 +102,8 @@ This function should only modify configuration layer settings."
             latex-enable-magic t
             latex-enable-folding t
             latex-enable-auto-fill t)
-     lsp
-     markdown
+     (lsp)
+     (markdown)
      (org :variables
           org-enable-epub-support t
           org-enable-hugo-support t
@@ -115,7 +115,7 @@ This function should only modify configuration layer settings."
           org-brain-path "~/org/notes/"
           ;; org-roam-directory "~/org/notes/"
           org-agenda-files '("~/org/"))
-     pandoc
+     (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
                plantuml-jar-path "~/scoop/apps/plantuml/current/plantuml.jar"
@@ -136,27 +136,27 @@ This function should only modify configuration layer settings."
              ranger-max-preview-size 1)
      (restclient :variables
                  restclient-use-org t)
-     search-engine
-     semantic
+     (search-engine)
+     (semantic)
      (shell :variables
             shell-default-height 30
             shell-default-full-span nil
             shell-default-shell 'eshell
             shell-default-position 'bottom)
-     shell-scripts
+     (shell-scripts)
      (sql :variables
           sql-auto-indent t
           sql-capitalize-keywords t)
-     syntax-checking
+     (syntax-checking)
      (treemacs :variables
                treemacs-use-all-the-icons-theme t
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode 'tag
                treemacs-use-git-mode 'deferred)
-     typography
-     version-control
-     windows-scripts
-     yaml
+     (typography)
+     (version-control)
+     (windows-scripts)
+     (yaml)
      )
 
    ;; List of additional packages that will be installed without being
