@@ -111,7 +111,8 @@ This function should only modify configuration layer settings."
           org-enable-github-support t
           org-enable-reveal-js-support t
           org-agenda-start-with-log-mode t
-          org-superstar-remove-leading-stars t
+          org-superstar-leading-bullet ?\s
+          org-superstar-special-todo-items t
           org-brain-path "~/org/notes/"
           ;; org-roam-directory "~/org/notes/"
           org-agenda-files '("~/org/"))
