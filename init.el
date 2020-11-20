@@ -144,7 +144,6 @@ This function should only modify configuration layer settings."
             shell-default-full-span nil
             shell-default-shell 'eshell
             shell-default-position 'bottom)
-     (shell-scripts)
      (sql :variables
           sql-auto-indent t
           sql-capitalize-keywords t)
@@ -159,7 +158,6 @@ This function should only modify configuration layer settings."
                     unicode-fonts-enable-ligatures t
                     unicode-fonts-ligature-modes '(prog-mode))
      (version-control)
-     (windows-scripts)
      (yaml)
      )
 
