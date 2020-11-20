@@ -131,10 +131,10 @@ This function should only modify configuration layer settings."
              python-save-before-test t
              python-sort-imports-on-save t)
      (ranger :variables
-             ranger-show-literal nil
              ranger-show-hidden t
              ranger-show-preview t
-             ranger-max-preview-size 1)
+             ranger-show-literal nil
+             ranger-max-preview-size 10)
      (restclient :variables
                  restclient-use-org t)
      (search-engine)
