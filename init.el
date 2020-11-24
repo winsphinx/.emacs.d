@@ -67,7 +67,7 @@ This function should only modify configuration layer settings."
            deft-recursive t
            deft-zetteldeft t
            deft-auto-save-interval 0
-           deft-directory "~/org/notes/"
+           deft-directory "~/.org/notes/"
            deft-extensions '("org" "md" "txt"))
      (django)
      (emacs-lisp)
@@ -113,9 +113,9 @@ This function should only modify configuration layer settings."
           org-agenda-start-with-log-mode t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
-          org-brain-path "~/org/notes/"
-          ;; org-roam-directory "~/org/notes/"
-          org-agenda-files '("~/org/"))
+          org-brain-path "~/.org/notes/"
+          ;; org-roam-directory "~/.org/notes/"
+          org-agenda-files '("~/.org/"))
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
@@ -676,13 +676,13 @@ before packages are loaded."
         (mapconcat #'identity
                    `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n#+hugo: more\n")
                    "\n")))
-    (setq org-capture-templates '(("t" "Todos" entry (file "~/org/Tasks.org")
+    (setq org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
                                    "* TODO %?\n\t%a\n\t%i\n")
-                                  ("n" "Notes" entry (file+headline "~/org/Notes.org" "NOTES")
+                                  ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
                                    "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
-                                  ("j" "Journal" entry (file+olp+datetree "~/org/Journal.org")
+                                  ("j" "Journal" entry (file+olp+datetree "~/.org/Journal.org")
                                    "*  %?\n\t%T\n\t%i\n")
-                                  ("b" "Blogs" entry (file "~/org/Blogs.org")
+                                  ("b" "Blogs" entry (file "~/.org/Blogs.org")
                                    (function org-hugo-new-subtree-post-capture-template) :empty-lines 1))))
 
   ;; 配置 semantic
