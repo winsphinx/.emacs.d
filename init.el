@@ -154,9 +154,6 @@ This function should only modify configuration layer settings."
                treemacs-use-follow-mode 'tag
                treemacs-use-git-mode 'deferred)
      (typography)
-     (unicode-fonts :variables
-                    unicode-fonts-enable-ligatures t
-                    unicode-fonts-ligature-modes '(prog-mode))
      (version-control)
      (yaml)
      )
