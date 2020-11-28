@@ -102,20 +102,23 @@ This function should only modify configuration layer settings."
             latex-enable-magic t
             latex-enable-folding t
             latex-enable-auto-fill t)
-     (lsp)
+     (lsp :variables
+          lsp-ui-doc-enable	nil)
      (markdown)
      (org :variables
-          org-enable-epub-support t
           org-enable-hugo-support t
-          ;; org-enable-roam-support t
           org-enable-github-support t
           org-enable-reveal-js-support t
           org-agenda-start-with-log-mode t
+          org-confirm-babel-evaluate nil
+          org-enforce-todo-dependencies t
+          org-hide-emphasis-markers t
+          org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
-          org-brain-path "~/.org/notes/"
-          ;; org-roam-directory "~/.org/notes/"
-          org-agenda-files '("~/.org/"))
+          spaceline-org-clock-p t
+          org-agenda-files '("~/.org/")
+          org-brain-path "~/.org/notes/")
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
@@ -633,13 +636,6 @@ before packages are loaded."
   ;; 配置个人信息
   (setq user-full-name "winsphinX"
         user-mail-address "winsphinx@xxx.com")
-
-  ;; 配置 org
-  (setq spaceline-org-clock-p t
-        org-hide-emphasis-markers t
-        org-src-preserve-indentation t
-        org-enforce-todo-dependencies t
-        org-confirm-babel-evaluate nil)
 
   ;; 配置 org-babel
   (org-babel-do-load-languages
