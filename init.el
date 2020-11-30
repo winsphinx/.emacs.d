@@ -175,7 +175,16 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(anaconda-mode
+                                    ccls
+                                    company-anaconda
+                                    company-ycmd
+                                    dired-quick-sort
+                                    flycheck-ycmd
+                                    google-translate
+                                    meghanada
+                                    rtags
+                                    ycmd)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
