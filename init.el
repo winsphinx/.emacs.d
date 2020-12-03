@@ -112,7 +112,7 @@ This function should only modify configuration layer settings."
           org-agenda-start-with-log-mode t
           org-confirm-babel-evaluate nil
           org-enforce-todo-dependencies t
-          org-hide-emphasis-markers t
+          org-hide-emphasis-markers nil
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
