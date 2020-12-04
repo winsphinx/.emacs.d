@@ -185,6 +185,7 @@ This function should only modify configuration layer settings."
                                     company-anaconda
                                     company-ycmd
                                     define-word
+                                    devdocs
                                     dired-quick-sort
                                     evil-args
                                     evil-easymotion
@@ -201,6 +202,7 @@ This function should only modify configuration layer settings."
                                     magit-gitflow
                                     meghanada
                                     org-download
+                                    org-present
                                     org-projectile
                                     orgit
                                     rtags
