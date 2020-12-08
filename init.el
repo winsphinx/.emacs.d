@@ -106,19 +106,18 @@ This function should only modify configuration layer settings."
           lsp-ui-doc-enable	nil)
      (markdown)
      (org :variables
-          org-enable-hugo-support t
           org-enable-github-support t
-          org-enable-reveal-js-support t
-          org-agenda-start-with-log-mode t
+          org-enable-hugo-support t
           org-confirm-babel-evaluate nil
           org-enforce-todo-dependencies t
           org-hide-emphasis-markers nil
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
-          spaceline-org-clock-p t
+          org-agenda-start-with-log-mode t
           org-agenda-files '("~/.org/")
-          org-brain-path "~/.org/notes/")
+          org-brain-path "~/.org/notes/"
+          spaceline-org-clock-p t)
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
