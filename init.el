@@ -56,9 +56,10 @@ This function should only modify configuration layer settings."
      (chinese :variables
               chinese-enable-youdao-dict t)
      (clojure :variables
-              ;; clojure-enable-linters 'clj-kondo
-              clojure-enable-sayid t
-              clojure-enable-clj-refactor t
+              clojure-backend 'cider
+              clojure-enable-linters 'clj-kondo
+              ;; clojure-enable-sayid t
+              ;; clojure-enable-clj-refactor t
               clojure-enable-fancify-symbols t)
      (cmake :variables
             cmake-enable-cmake-ide-support t)
