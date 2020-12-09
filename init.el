@@ -661,14 +661,19 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; 配置系统环境
-  (set-language-environment "UTF-8")
-  (setq system-time-locale "C")
+  ;; 配置语言环境
+  (setenv "LANG" "en_US.UTF-8")
+  (set-locale-environment "en_US.UTF-8")
+  (set-language-environment 'English)
+  (prefer-coding-system 'utf-8)
 
-  ;; 配置地理信息
-  (setq calendar-latitude 30.0072
+  ;; 配置系统信息
+  (setq system-time-locale "C"
+        calendar-latitude 30.0072
         calendar-longitude 120.5749
-        calendar-location-name "绍兴")
+        calendar-location-name "绍兴"
+        chinese-calendar-celestial-stem ["甲" "乙" "丙" "丁" "戊" "己" "庚" "辛" "壬" "癸"]
+        chinese-calendar-terrestrial-branch ["子" "丑" "寅" "卯" "辰" "巳" "午" "未" "申" "酉" "戌" "亥"])
 
   ;; 配置个人信息
   (setq user-full-name "winsphinX"
