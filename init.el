@@ -175,42 +175,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(
-                                    ac-ispell
-                                    ace-jump-helm-line
-                                    anaconda-mode
-                                    auto-complete
-                                    ccls
-                                    chinese-conv
-                                    company-anaconda
-                                    company-ycmd
-                                    define-word
-                                    devdocs
-                                    dired-quick-sort
-                                    evil-args
-                                    evil-easymotion
-                                    evil-escape
-                                    evil-exchange
-                                    evil-indent-plus
-                                    fancy-battery
-                                    flx-ido
-                                    flycheck-ycmd
-                                    google-translate
-                                    helm-c-yasnippet
-                                    helm-make
-                                    highlight-indentation
-                                    magit-gitflow
-                                    meghanada
-                                    org-download
-                                    org-present
-                                    org-projectile
-                                    orgit
-                                    rtags
-                                    symon
-                                    vi-tilde-fringe
-                                    volatile-highlights
-                                    ycmd
-                                    )
+   dotspacemacs-excluded-packages '()
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
