@@ -683,7 +683,7 @@ before packages are loaded."
                                   ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
                                    "* %?\n\t%i\n\t%a\n\t%U" :empty-lines 1)
                                   ("j" "Journal" entry (file+olp+datetree "~/.org/Journal.org")
-                                   "*  %?\n\t%T\n\t%i\n")
+                                   "* TODO %?\n\tSCHEDULED: %t\n\t%a\n\t%i\n" :clock-in t :clock-resume t)
                                   ("b" "Blogs" entry (file "~/.org/Blogs.org")
                                    (function org-hugo-new-subtree-post-capture-template) :empty-lines 1))))
 
