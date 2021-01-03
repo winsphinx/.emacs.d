@@ -116,6 +116,7 @@ This function should only modify configuration layer settings."
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
+          org-clock-in-switch-to-state "TODO"
           org-agenda-start-with-log-mode t
           org-agenda-files '("~/.org/")
           org-brain-path "~/.org/notes/"
