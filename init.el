@@ -116,7 +116,12 @@ This function should only modify configuration layer settings."
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
+          org-clock-in-resume t
           org-clock-in-switch-to-state "TODO"
+          org-clock-out-when-done t
+          org-clock-out-remove-zero-time-clocks t
+          org-clock-persist t
+          org-clock-persist-query-resume nil
           org-agenda-start-with-log-mode t
           org-agenda-files '("~/.org/")
           org-brain-path "~/.org/notes/"
@@ -711,6 +716,9 @@ before packages are loaded."
                        charset (font-spec :family "微软雅黑")))
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    (setq inhibit-compacting-font-caches t)
+
+   ;; 配置org-clock自动恢复
+   (org-clock-persistence-insinuate)
    )
   )
 
