@@ -123,9 +123,12 @@ This function should only modify configuration layer settings."
           org-clock-persist t
           org-clock-persist-query-resume nil
           org-agenda-start-with-log-mode t
-          org-agenda-files '("~/.org/")
+          spaceline-org-clock-p t
           org-brain-path "~/.org/notes/"
-          spaceline-org-clock-p t)
+          org-agenda-files '("~/.org/")
+          org-agenda-time-grid '((daily today require-timed)
+                                 (300 600 900 1200 1500 1800 2100 2400)
+                                 "......" "-----------------------------------------------------"))
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
