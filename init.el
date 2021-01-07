@@ -118,17 +118,15 @@ This function should only modify configuration layer settings."
           org-superstar-special-todo-items t
           org-clock-in-resume t
           org-clock-in-switch-to-state "TODO"
-          org-clock-out-when-done t
           org-clock-out-remove-zero-time-clocks t
+          org-clock-out-when-done t
           org-clock-persist t
           org-clock-persist-query-resume nil
           org-agenda-start-with-log-mode t
-          spaceline-org-clock-p t
-          org-brain-path "~/.org/notes/"
+          org-agenda-use-time-grid nil
           org-agenda-files '("~/.org/")
-          org-agenda-time-grid '((daily today require-timed)
-                                 (300 600 900 1200 1500 1800 2100 2400)
-                                 "......" "-----------------------------------------------------"))
+          org-brain-path "~/.org/notes/"
+          spaceline-org-clock-p t)
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
