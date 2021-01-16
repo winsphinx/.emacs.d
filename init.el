@@ -686,8 +686,7 @@ before packages are loaded."
       (let* ((title (read-from-minibuffer "Post Title: "))
              (fname (org-hugo-slug title)))
         (mapconcat #'identity
-                   `("", (concat "* TODO " title), ":PROPERTIES:", (concat ":EXPORT_FILE_NAME: " fname), ":END:", "%?\n#+hugo: more\n")
-                   "\n")))
+                   `(,(concat "* TODO " title) ":PROPERTIES:" ,(concat ":EXPORT_FILE_NAME: " fname) ":END:" "%?\n#+hugo: more") "\n")))
     (setq org-capture-templates '(("t" "Todos" entry (file "~/.org/Tasks.org")
                                    "* TODO %?\n\tSCHEDULED: %t\n\t%a\n\t%i")
                                   ("n" "Notes" entry (file+headline "~/.org/Notes.org" "NOTES")
