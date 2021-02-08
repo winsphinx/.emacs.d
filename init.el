@@ -104,7 +104,7 @@ This function should only modify configuration layer settings."
             latex-enable-folding t
             latex-enable-auto-fill t)
      (lsp :variables
-          lsp-ui-doc-enable	nil)
+          lsp-ui-doc-enable nil)
      (markdown)
      (org :variables
           org-enable-github-support t
