@@ -112,7 +112,8 @@ This function should only modify configuration layer settings."
           org-enable-valign t
           org-confirm-babel-evaluate nil
           org-enforce-todo-dependencies t
-          org-hide-emphasis-markers nil
+          org-hide-emphasis-markers t
+          org-pretty-entities t
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
