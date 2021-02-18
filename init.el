@@ -154,7 +154,6 @@ This function should only modify configuration layer settings."
      (restclient :variables
                  restclient-use-org t)
      (search-engine)
-     (semantic)
      (shell :variables
             shell-default-height 30
             shell-default-full-span nil
