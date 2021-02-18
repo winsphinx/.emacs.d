@@ -83,7 +83,8 @@ This function should only modify configuration layer settings."
            helm-enable-auto-resize nil
            history-length 10
            history-delete-duplicates t)
-     (html)
+     (html :variables
+           web-fmt-tool 'prettier)
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
      (imenu-list)
@@ -94,15 +95,18 @@ This function should only modify configuration layer settings."
                  javascript-backend 'lsp
                  javascript-import-tool 'import-js
                  javascript-fmt-on-save t
+                 javascript-fmt-tool 'prettier
                  js-indent-level 2
                  js2-basic-offset 2)
      (json :variables
            json-backend 'lsp
-           json-fmt-on-save t)
+           json-fmt-on-save t
+           json-fmt-tool 'prettier)
      (latex :variables
             latex-enable-magic t
             latex-enable-folding t
-            latex-enable-auto-fill t)
+            latex-enable-auto-fill t
+            latex-backend 'company-auctex)
      (lsp :variables
           lsp-ui-doc-enable nil)
      (markdown)
@@ -169,7 +173,8 @@ This function should only modify configuration layer settings."
      (version-control :variables
                       version-control-diff-side 'left
                       version-control-global-margin t)
-     (yaml)
+     (yaml :variables
+           yaml-enable-lsp t)
      )
 
    ;; List of additional packages that will be installed without being wrapped
