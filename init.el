@@ -61,8 +61,6 @@ This function should only modify configuration layer settings."
               ;; clojure-enable-sayid t
               ;; clojure-enable-clj-refactor t
               clojure-enable-fancify-symbols t)
-     (cmake :variables
-            cmake-enable-cmake-ide-support t)
      (dap)
      (deft :variables
            deft-recursive t
