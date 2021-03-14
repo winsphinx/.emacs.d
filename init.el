@@ -110,6 +110,7 @@ This function should only modify configuration layer settings."
           lsp-ui-doc-enable nil)
      (markdown)
      (org :variables
+          org-enable-appear-support t
           org-enable-github-support t
           org-enable-hugo-support t
           org-enable-valign t
