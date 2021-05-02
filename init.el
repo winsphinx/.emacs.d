@@ -64,7 +64,6 @@ This function should only modify configuration layer settings."
      (dap)
      (deft :variables
            deft-recursive t
-           deft-zetteldeft t
            deft-auto-save-interval 0
            deft-directory "~/.org/notes/"
            deft-extensions '("org" "md" "txt"))
@@ -127,6 +126,10 @@ This function should only modify configuration layer settings."
           org-clock-out-when-done t
           org-clock-persist t
           org-clock-persist-query-resume nil
+          org-enable-roam-support t
+          org-enable-roam-server t
+          org-enable-roam-protocol t
+          org-roam-directory "~/.org/notes/"
           org-agenda-start-with-log-mode t
           org-agenda-use-time-grid nil
           org-agenda-files '("~/.org/")
