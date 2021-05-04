@@ -134,7 +134,8 @@ This function should only modify configuration layer settings."
           org-agenda-use-time-grid nil
           org-agenda-files '("~/.org/")
           org-brain-path "~/.org/notes/"
-          spaceline-org-clock-p t)
+          spaceline-org-clock-p t
+          org-todo-dependencies-strategy 'naive-auto)
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
@@ -736,12 +737,6 @@ before packages are loaded."
     (remove-hook 'completion-at-point-functions
                  'semantic-analyze-nolongprefix-completion-at-point-function))
   (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
-
-  ;; 当子任务全部完成时，总任务自动完成
-  (defun org-summary-todo (n-done n-not-done)
-    (let (org-log-done org-log-states)
-      (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
-  (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
   ;; 最后加载
   (spacemacs|do-after-display-system-init
