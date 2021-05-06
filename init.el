@@ -74,18 +74,14 @@ This function should only modify configuration layer settings."
      (github)
      (gnus)
      (graphviz)
-     (helm :variables
-           helm-no-header nil
-           helm-use-fuzzy 'always
-           helm-enable-auto-resize nil
-           history-length 10
-           history-delete-duplicates t)
      (html :variables
            web-fmt-tool 'prettier)
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
      (imenu-list)
      (ipython-notebook)
+     (ivy :variables
+          ivy-enable-advanced-buffer-information t)
      (java :variables
            java-backend 'lsp)
      (javascript :variables
