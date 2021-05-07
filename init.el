@@ -45,7 +45,6 @@ This function should only modify configuration layer settings."
      (better-defaults :variables
                       better-defaults-move-to-end-of-code-first t
                       better-defaults-move-to-beginning-of-code-first t)
-     (bibtex)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
             c-c++-lsp-enable-semantic-highlight 'rainbow
