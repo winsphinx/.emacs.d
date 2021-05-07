@@ -80,6 +80,7 @@ This function should only modify configuration layer settings."
      (imenu-list)
      (ipython-notebook)
      (ivy :variables
+          ivy-wrap t
           ivy-enable-advanced-buffer-information t)
      (java :variables
            java-backend 'lsp)
