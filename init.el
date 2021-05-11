@@ -712,6 +712,14 @@ before packages are loaded."
      (ruby . t)
      (shell . t)))
 
+  ;; 配置 org-clock 自动恢复
+  (with-eval-after-load 'org
+    (org-clock-persistence-insinuate))
+
+  ;; 配置在 magit transient 中使用 `q' 退出
+  (with-eval-after-load 'transient
+    (transient-bind-q-to-quit))
+
   ;; 配置 org-capture
   (with-eval-after-load 'org-capture
     (defun org-hugo-new-subtree-post-capture-template ()
@@ -746,14 +754,6 @@ before packages are loaded."
                        charset (font-spec :family "微软雅黑")))
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    (setq inhibit-compacting-font-caches t)
-
-   ;; 配置 org-clock 自动恢复
-   (with-eval-after-load 'org
-     (org-clock-persistence-insinuate))
-
-   ;; 配置在 magit transient 中使用 `q' 退出
-   (with-eval-after-load 'transient
-     (transient-bind-q-to-quit))
    )
   )
 
