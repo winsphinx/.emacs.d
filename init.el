@@ -329,7 +329,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-new-empty-buffer-major-mode 'text-mode
 
    ;; Default major mode of the scratch buffer (default `text-mode')
-   dotspacemacs-scratch-mode 'org-mode
+   dotspacemacs-scratch-mode 'text-mode
 
    ;; If non-nil, *scratch* buffer will be persistent. Things you write down in
    ;; *scratch* buffer will be saved and restored automatically.
@@ -746,8 +746,9 @@ before packages are loaded."
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    (setq inhibit-compacting-font-caches t)
 
-   ;; 配置org-clock自动恢复
-   (org-clock-persistence-insinuate)
+   ;; 配置 org-clock 自动恢复
+   (with-eval-after-load 'org
+     (org-clock-persistence-insinuate))
    )
   )
 
