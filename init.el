@@ -69,7 +69,8 @@ This function should only modify configuration layer settings."
      (django)
      (emacs-lisp)
      (erc)
-     (git)
+     (git :variables
+          transient-display-buffer-action '(display-buffer-below-selected))
      (github)
      (gnus)
      (graphviz)
@@ -749,6 +750,10 @@ before packages are loaded."
    ;; 配置 org-clock 自动恢复
    (with-eval-after-load 'org
      (org-clock-persistence-insinuate))
+
+   ;; 配置在 magit transient 中使用 `q' 退出
+   (with-eval-after-load 'transient
+     (transient-bind-q-to-quit))
    )
   )
 
