@@ -130,7 +130,6 @@ This function should only modify configuration layer settings."
           org-agenda-start-with-log-mode t
           org-agenda-use-time-grid nil
           org-agenda-files '("~/.org/")
-          org-brain-path "~/.org/notes/"
           spaceline-org-clock-p t
           org-todo-dependencies-strategy 'naive-auto)
      (pandoc)
