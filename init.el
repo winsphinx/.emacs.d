@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
      (ipython-notebook)
      (ivy :variables
           ivy-wrap t
+          ivy-enable-icons t
           ivy-enable-advanced-buffer-information t)
      (java :variables
            java-backend 'lsp)
