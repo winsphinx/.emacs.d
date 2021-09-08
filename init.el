@@ -121,6 +121,7 @@ This function should only modify configuration layer settings."
           org-enable-roam-support t
           org-enable-roam-server t
           org-enable-roam-protocol t
+          org-roam-v2-ack t
           org-roam-directory "~/.org/notes/"
           org-agenda-start-with-log-mode t
           org-agenda-use-time-grid nil
