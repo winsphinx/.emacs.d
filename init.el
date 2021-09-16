@@ -54,6 +54,12 @@ This function should only modify configuration layer settings."
             c-c++-enable-organize-includes-on-save t)
      (chinese :variables
               chinese-enable-youdao-dict t)
+     (clojure :variables
+              clojure-backend 'cider
+              clojure-enable-linters 'clj-kondo
+              ;; clojure-enable-sayid t
+              ;; clojure-enable-clj-refactor t
+              clojure-enable-fancify-symbols t)
      (dap)
      (deft :variables
            deft-recursive t
