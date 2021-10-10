@@ -165,6 +165,7 @@ This function should only modify configuration layer settings."
           sql-auto-indent t
           sql-capitalize-keywords t)
      (syntax-checking)
+     (themes-megapack)
      (treemacs :variables
                treemacs-use-all-the-icons-theme t
                treemacs-use-filewatch-mode t
