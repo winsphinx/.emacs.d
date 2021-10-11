@@ -755,6 +755,7 @@ before packages are loaded."
 
   ;; 最后加载
   (spacemacs|do-after-display-system-init
+   (spacemacs/set-default-font dotspacemacs-default-font)
    ;; 配置中文字体
    (dolist (charset '(han kana symbol cjk-misc bopomofo))
      (set-fontset-font (frame-parameter nil 'font)
