@@ -66,7 +66,6 @@ This function should only modify configuration layer settings."
            deft-auto-save-interval 0
            deft-directory "~/.org/notes/"
            deft-extensions '("org" "md" "txt"))
-     (django)
      (emacs-lisp)
      (erc)
      (git :variables
