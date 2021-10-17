@@ -55,7 +55,7 @@ This function should only modify configuration layer settings."
      (chinese :variables
               chinese-enable-youdao-dict t)
      (clojure :variables
-              clojure-backend 'cider
+              clojure-backend 'lsp
               clojure-enable-linters 'clj-kondo
               ;; clojure-enable-sayid t
               ;; clojure-enable-clj-refactor t
