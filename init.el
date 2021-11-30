@@ -112,6 +112,7 @@ This function should only modify configuration layer settings."
           org-enable-valign t
           org-confirm-babel-evaluate nil
           org-enforce-todo-dependencies t
+          org-export-preserve-breaks t
           org-hide-emphasis-markers t
           org-pretty-entities t
           org-src-preserve-indentation t
