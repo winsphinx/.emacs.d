@@ -53,7 +53,8 @@ This function should only modify configuration layer settings."
             c-c++-enable-clang-format-on-save t
             c-c++-enable-organize-includes-on-save t)
      (chinese :variables
-              chinese-enable-youdao-dict t)
+              chinese-enable-youdao-dict t
+              pangu-spacing-real-insert-separtor t)
      (clojure :variables
               clojure-backend 'lsp
               clojure-enable-linters 'clj-kondo
