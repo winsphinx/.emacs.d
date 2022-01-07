@@ -116,6 +116,7 @@ This function should only modify configuration layer settings."
           org-export-preserve-breaks t
           org-hide-emphasis-markers t
           org-pretty-entities t
+          org-adapt-indentation t
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
