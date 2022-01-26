@@ -110,32 +110,33 @@ This function should only modify configuration layer settings."
           org-enable-appear-support t
           org-enable-github-support t
           org-enable-hugo-support t
+          org-enable-roam-protocol t
+          org-enable-roam-server t
+          org-enable-roam-support t
           org-enable-valign t
-          org-confirm-babel-evaluate nil
-          org-enforce-todo-dependencies t
-          org-export-preserve-breaks t
-          org-hide-emphasis-markers t
-          org-pretty-entities t
           org-adapt-indentation t
-          org-src-preserve-indentation t
-          org-superstar-leading-bullet ?\s
-          org-superstar-special-todo-items t
+          org-agenda-files '("~/.org/")
+          org-agenda-start-with-log-mode t
+          org-agenda-use-time-grid nil
+          org-appear-trigger 'on-change
           org-clock-in-resume t
           org-clock-in-switch-to-state "TODO"
           org-clock-out-remove-zero-time-clocks t
           org-clock-out-when-done t
           org-clock-persist t
           org-clock-persist-query-resume nil
-          org-enable-roam-support t
-          org-enable-roam-server t
-          org-enable-roam-protocol t
-          org-roam-v2-ack t
+          org-confirm-babel-evaluate nil
+          org-enforce-todo-dependencies t
+          org-export-preserve-breaks t
+          org-hide-emphasis-markers t
+          org-pretty-entities t
           org-roam-directory "~/.org/notes/"
-          org-agenda-start-with-log-mode t
-          org-agenda-use-time-grid nil
-          org-agenda-files '("~/.org/")
-          spaceline-org-clock-p t
-          org-todo-dependencies-strategy 'naive-auto)
+          org-roam-v2-ack t
+          org-src-preserve-indentation t
+          org-superstar-leading-bullet ?\s
+          org-superstar-special-todo-items t
+          org-todo-dependencies-strategy 'naive-auto
+          spaceline-org-clock-p t)
      (pandoc)
      (plantuml :variables
                plantuml-default-exec-mode 'jar
