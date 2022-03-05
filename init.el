@@ -732,8 +732,7 @@ before packages are loaded."
      (shell . t)))
 
   ;; 配置 org-clock 自动恢复
-  (with-eval-after-load 'org
-    (org-clock-persistence-insinuate))
+  (org-clock-persistence-insinuate)
 
   ;; 配置在 magit transient 中使用 `q' 退出
   (with-eval-after-load 'transient
