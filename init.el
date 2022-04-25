@@ -171,6 +171,10 @@ This function should only modify configuration layer settings."
             shell-default-full-span nil
             shell-default-shell 'eshell
             shell-default-position 'bottom)
+     (spell-checking :variables
+                     enable-flyspell-auto-completion t
+                     spell-checking-enable-by-default nil
+                     spell-checking-enable-auto-dictionary t)
      (sql :variables
           sql-auto-indent t
           sql-capitalize-keywords t)
