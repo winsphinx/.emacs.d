@@ -76,6 +76,10 @@ This function should only modify configuration layer settings."
      (gnus)
      (graphviz)
      (html :variables
+           css-enable-lsp t
+           html-enable-lsp t
+           less-enable-lsp t
+           scss-enable-lsp t
            web-fmt-tool 'prettier)
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
