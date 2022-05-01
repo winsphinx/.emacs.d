@@ -103,7 +103,7 @@ This function should only modify configuration layer settings."
            json-fmt-on-save t
            json-fmt-tool 'prettier)
      (latex :variables
-            latex-backend 'company-auctex
+            latex-backend 'lsp
             latex-enable-magic t
             latex-enable-folding t
             latex-enable-auto-fill t
