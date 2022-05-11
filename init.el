@@ -50,7 +50,6 @@ This function should only modify configuration layer settings."
             c-c++-backend 'lsp-clangd
             c-c++-lsp-enable-semantic-highlight 'rainbow
             c-c++-lsp-semantic-highlight-method 'font-lock
-            c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-format-on-save t
             c-c++-enable-organize-includes-on-save t)
      (chinese :variables
