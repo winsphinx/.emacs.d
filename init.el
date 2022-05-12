@@ -83,7 +83,6 @@ This function should only modify configuration layer settings."
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
      (imenu-list)
-     (ipython-notebook)
      (ivy :variables
           ivy-wrap t
           ivy-enable-icons t
@@ -727,7 +726,6 @@ before packages are loaded."
      (calc . t)
      (clojure . t)
      (dot . t)
-     (ein . t)
      (emacs-lisp . t)
      (gnuplot . t)
      (java . t)
