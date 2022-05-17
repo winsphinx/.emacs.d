@@ -71,7 +71,6 @@ This function should only modify configuration layer settings."
      (emacs-lisp)
      (git :variables
           transient-display-buffer-action '(display-buffer-below-selected))
-     (github)
      (gnus)
      (graphviz)
      (html :variables
