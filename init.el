@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
            deft-directory "~/.org/notes/"
            deft-extensions '("org" "md" "txt"))
      (emacs-lisp)
+     (erc)
      (git :variables
           transient-display-buffer-action '(display-buffer-below-selected))
      (gnus)
@@ -161,10 +162,6 @@ This function should only modify configuration layer settings."
              ranger-show-preview t
              ranger-show-literal nil
              ranger-max-preview-size 10)
-     (rcirc :variables
-            rcirc-enable-styles t
-            rcirc-enable-emojify t
-            rcirc-enable-erc-image t)
      (restclient :variables
                  restclient-use-org t)
      (search-engine)
