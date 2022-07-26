@@ -143,9 +143,9 @@ This function should only modify configuration layer settings."
           spaceline-org-clock-p t)
      (pandoc)
      (plantuml :variables
-               plantuml-default-exec-mode 'jar
-               plantuml-jar-path (cond ((spacemacs/system-is-mswindows) "~/scoop/apps/plantuml/current/plantuml.jar")
-                                       ((spacemacs/system-is-linux) "/usr/share/java/plantuml/plantuml.jar"))
+               plantuml-default-exec-mode 'executable
+               plantuml-executable-path (cond ((spacemacs/system-is-mswindows) "~/scoop/apps/plantuml/current/plantuml.jar")
+                                              ((spacemacs/system-is-linux) "/usr/share/java/plantuml/plantuml.jar"))
                org-plantuml-jar-path (cond ((spacemacs/system-is-mswindows) "~/scoop/apps/plantuml/current/plantuml.jar")
                                            ((spacemacs/system-is-linux) "/usr/share/java/plantuml/plantuml.jar")))
      (python :variables
