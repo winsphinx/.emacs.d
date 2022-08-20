@@ -706,7 +706,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
-  ;; 配置语言环境
+  ;; 配置编码环境
   (setenv "LANG" "en_US.UTF-8")
   (set-locale-environment "en_US.UTF-8")
   (set-language-environment 'English)
@@ -790,6 +790,8 @@ before packages are loaded."
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    ;; 配置字体缓存
    (setq inhibit-compacting-font-caches t)
+   ;; 安装时执行 native compile
+   (setq package-native-compile t)
    )
 )
 
