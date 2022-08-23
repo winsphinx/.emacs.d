@@ -790,8 +790,6 @@ before packages are loaded."
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    ;; 配置字体缓存
    (setq inhibit-compacting-font-caches t)
-   ;; 安装时执行 native compile
-   (setq package-native-compile t)
    )
 )
 
