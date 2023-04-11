@@ -113,6 +113,7 @@ This function should only modify configuration layer settings."
           org-enable-appear-support t
           org-enable-github-support t
           org-enable-hugo-support t
+          org-enable-modern-support t
           org-enable-roam-protocol t
           org-enable-roam-ui t
           org-enable-roam-support t
