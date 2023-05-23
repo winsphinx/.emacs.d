@@ -74,6 +74,7 @@ This function should only modify configuration layer settings."
           transient-display-buffer-action '(display-buffer-below-selected))
      (gnus)
      (graphviz)
+     (helpful)
      (html :variables
            css-enable-lsp t
            html-enable-lsp t
