@@ -756,10 +756,6 @@ before packages are loaded."
   (with-eval-after-load 'transient
     (transient-bind-q-to-quit))
 
-  ;; 配置 undo-history 不自动保存
-  (with-eval-after-load 'undo-tree
-    (setq undo-tree-auto-save-history nil))
-
   ;; 配置 org-capture
   (with-eval-after-load 'org-capture
     (defun org-hugo-new-subtree-post-capture-template ()
