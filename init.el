@@ -791,7 +791,9 @@ before packages are loaded."
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
    ;; 配置字体缓存
    (setq inhibit-compacting-font-caches t)
-   ;; 设置窗口边界
+   ;; 设置不保存撤销历史
+   (setq undo-tree-auto-save-history nil)
+   ;; 设置窗口边界行数
    (setq scroll-margin 3)
    )
 )
