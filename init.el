@@ -752,10 +752,6 @@ before packages are loaded."
      (ruby . t)
      (shell . t)))
 
-  ;; 配置在 magit transient 中使用 `q' 退出
-  (with-eval-after-load 'transient
-    (transient-bind-q-to-quit))
-
   ;; 配置 org-capture
   (with-eval-after-load 'org-capture
     (defun org-hugo-new-subtree-post-capture-template ()
@@ -782,6 +778,19 @@ before packages are loaded."
                  'semantic-analyze-nolongprefix-completion-at-point-function))
   (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
 
+  ;; 配置字体缓存
+  (setq inhibit-compacting-font-caches t)
+
+  ;; 设置窗口边界行数
+  (setq scroll-margin 3)
+
+  ;; 设置不保存 undo tree 的撤销历史
+  (setq undo-tree-auto-save-history nil)
+
+  ;; 设置在 magit transient 中使用 `q' 退出
+  (with-eval-after-load 'transient
+    (transient-bind-q-to-quit))
+
   ;; 最后加载
   (spacemacs|do-after-display-system-init
    ;; 配置中文字体
@@ -789,12 +798,6 @@ before packages are loaded."
      (set-fontset-font (frame-parameter nil 'font)
                        charset (font-spec :family "微软雅黑")))
    ;; (setq face-font-rescale-alist (list (cons "微软雅黑" 1.2)))
-   ;; 配置字体缓存
-   (setq inhibit-compacting-font-caches t)
-   ;; 设置不保存撤销历史
-   (setq undo-tree-auto-save-history nil)
-   ;; 设置窗口边界行数
-   (setq scroll-margin 3)
    )
 )
 
