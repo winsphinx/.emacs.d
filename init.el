@@ -156,7 +156,8 @@ This function should only modify configuration layer settings."
              python-formatter 'black
              python-format-on-save t
              python-save-before-test t
-             python-sort-imports-on-save t)
+             python-sort-imports-on-save t
+             dap-python-debugger 'debugpy)
      (ranger :variables
              ranger-show-hidden t
              ranger-show-preview t
