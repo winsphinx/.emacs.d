@@ -48,8 +48,6 @@ This function should only modify configuration layer settings."
                       better-defaults-move-to-beginning-of-code-first t)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
-            c-c++-lsp-enable-semantic-highlight 'rainbow
-            c-c++-lsp-semantic-highlight-method 'font-lock
             c-c++-enable-clang-format-on-save t
             c-c++-enable-organize-includes-on-save t)
      (chinese :variables
@@ -768,16 +766,6 @@ before packages are loaded."
                                    "* %?\n\tSCHEDULED: %t\n\t%i" :clock-in t :clock-resume t)
                                   ("b" "Blogs" entry (file "~/.org/Blogs.org")
                                    (function org-hugo-new-subtree-post-capture-template) :empty-lines 1))))
-
-  ;; 配置 semantic
-  (defun semantic-remove-hooks ()
-    (remove-hook 'completion-at-point-functions
-                 'semantic-analyze-completion-at-point-function)
-    (remove-hook 'completion-at-point-functions
-                 'semantic-analyze-notc-completion-at-point-function)
-    (remove-hook 'completion-at-point-functions
-                 'semantic-analyze-nolongprefix-completion-at-point-function))
-  (add-hook 'semantic-mode-hook #'semantic-remove-hooks)
 
   ;; 配置字体缓存
   (setq inhibit-compacting-font-caches t)
