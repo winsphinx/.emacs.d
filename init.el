@@ -116,7 +116,6 @@ This function should only modify configuration layer settings."
           org-enable-roam-ui t
           org-enable-roam-support t
           org-enable-transclusion-support t
-          org-enable-valign t
           org-adapt-indentation t
           org-agenda-files '("~/.org/")
           org-agenda-start-with-log-mode t
