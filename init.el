@@ -68,6 +68,7 @@ This function should only modify configuration layer settings."
            deft-extensions '("org" "md" "txt"))
      (emacs-lisp)
      (erc)
+     (eww)
      (git :variables
           transient-display-buffer-action '(display-buffer-below-selected))
      (gnus)
