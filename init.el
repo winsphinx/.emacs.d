@@ -113,9 +113,6 @@ This function should only modify configuration layer settings."
           org-enable-appear-support t
           org-enable-github-support t
           org-enable-hugo-support t
-          org-enable-roam-protocol t
-          org-enable-roam-ui t
-          org-enable-roam-support t
           org-enable-transclusion-support t
           org-adapt-indentation t
           org-agenda-files '("~/.org/")
@@ -133,8 +130,6 @@ This function should only modify configuration layer settings."
           org-export-preserve-breaks t
           org-hide-emphasis-markers t
           org-pretty-entities t
-          org-roam-directory "~/.org/notes/"
-          org-roam-v2-ack t
           org-src-preserve-indentation t
           org-superstar-leading-bullet ?\s
           org-superstar-special-todo-items t
