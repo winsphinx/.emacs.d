@@ -607,6 +607,14 @@ It should only modify the values of Spacemacs settings."
    ;; (default '("rg" "ag" "pt" "ack" "grep"))
    dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
 
+   ;; The backend used for undo/redo functionality. Possible values are
+   ;; `undo-tree', `undo-fu' and `undo-redo', see also `evil-undo-system'.
+   ;; Note that saved undo history does not get transferred when changing
+   ;; from undo-tree to undo-fu or undo-redo.
+   ;; The default is currently 'undo-tree, but it will likely be changed
+   ;; and at some point removed because undo-tree is not maintained anymore.
+   dotspacemacs-undo-system 'undo-fu
+
    ;; Format specification for setting the frame title.
    ;; %a - the `abbreviated-file-name', or `buffer-name'
    ;; %t - `projectile-project-name'
@@ -771,9 +779,6 @@ before packages are loaded."
 
   ;; 设置窗口边界行数
   (setq scroll-margin 3)
-
-  ;; 设置不保存 undo tree 的撤销历史
-  (setq undo-tree-auto-save-history nil)
 
   ;; 设置在 magit transient 中使用 `q' 退出
   (with-eval-after-load 'transient
