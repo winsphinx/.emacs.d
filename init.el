@@ -744,6 +744,7 @@ before packages are loaded."
      (dot . t)
      (emacs-lisp . t)
      (gnuplot . t)
+     (http . t)
      (java . t)
      (js . t)
      (latex . t)
@@ -754,7 +755,6 @@ before packages are loaded."
      (perl . t)
      (plantuml . t)
      (python . t)
-     (restclient . t)
      (ruby . t)
      (shell . t)))
 
