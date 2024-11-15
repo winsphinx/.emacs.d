@@ -486,7 +486,11 @@ It should only modify the values of Spacemacs settings."
    ;; If nil, no load-hints enabled. If t, enable the `load-hints' which will
    ;; put the most likely path on the top of `load-path' to reduce walking
    ;; through the whole `load-path'.
-   dotspacemacs-enable-load-hints nil
+   dotspacemacs-enable-load-hints t
+
+   ;; If t, enable the `package-quickstart' feature to avoid full package
+   ;; loading, otherwise do not try the `package-quickstart' (default nil).
+   dotspacemacs-enable-package-quickstart t
 
    ;; If non-nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
