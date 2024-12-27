@@ -714,6 +714,8 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  ;; 设置光标形状
+  (setq w32-use-visible-system-caret nil)
   )
 
 (defun dotspacemacs/user-load ()
