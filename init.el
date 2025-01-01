@@ -150,6 +150,7 @@ This function should only modify configuration layer settings."
              python-format-on-save t
              python-save-before-test t
              python-sort-imports-on-save t
+             importmagic-python-interpreter "python"
              dap-python-debugger 'debugpy)
      (ranger :variables
              ranger-show-hidden t
