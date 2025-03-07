@@ -796,6 +796,9 @@ before packages are loaded."
   ;; 设置窗口边界行数
   (setq scroll-margin 3)
 
+  ;; 设置 dired 变量
+  (setq ls-lisp-use-insert-directory-program t)
+
   ;; 设置在 magit transient 中使用 `q' 退出
   (with-eval-after-load 'transient
     (transient-bind-q-to-quit))
