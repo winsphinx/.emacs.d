@@ -182,7 +182,7 @@ This function should only modify configuration layer settings."
      (typography)
      (version-control :variables
                       version-control-diff-side 'left
-                      version-control-margin auto)
+                      version-control-margin 'auto)
      (yaml :variables
            yaml-enable-lsp t)
      )
