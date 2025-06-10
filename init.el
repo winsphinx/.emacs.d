@@ -179,7 +179,6 @@ This function should only modify configuration layer settings."
                treemacs-use-filewatch-mode t
                treemacs-use-follow-mode 'tag
                treemacs-use-git-mode 'deferred)
-     (typography)
      (version-control :variables
                       version-control-diff-side 'left
                       version-control-margin 'auto)
