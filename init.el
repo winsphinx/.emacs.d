@@ -145,8 +145,9 @@ This function should only modify configuration layer settings."
              python-backend 'lsp
              python-lsp-server 'pyright
              python-test-runner 'pytest
-             python-spacemacs-indent-guess nil
              python-formatter 'black
+             python-virtualenv-management 'pet
+             python-spacemacs-indent-guess nil
              python-format-on-save t
              python-save-before-test t
              python-sort-imports-on-save t
