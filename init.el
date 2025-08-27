@@ -48,6 +48,7 @@ This function should only modify configuration layer settings."
                       better-defaults-move-to-beginning-of-code-first t)
      (c-c++ :variables
             c-c++-backend 'lsp-clangd
+            c-c++-formatter-indent-line t
             c-c++-enable-clang-format-on-save t
             c-c++-enable-organize-includes-on-save t)
      (chinese :variables
