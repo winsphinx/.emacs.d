@@ -147,6 +147,7 @@ This function should only modify configuration layer settings."
              python-lsp-server 'pyright
              python-test-runner 'pytest
              python-formatter 'black
+             python-enable-tools '(pip uv)
              python-virtualenv-management 'pet
              python-spacemacs-indent-guess nil
              python-format-on-save t
